@@ -4,12 +4,13 @@
 
 # terminal emulator
 super + Return
-	xfce4-terminal
+	kitty
 #	urxvt
 
 # program launcher
 super + @space
-	dmenu_run
+	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/cuts/scripts/rofi/launcher.rasi
+#	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
