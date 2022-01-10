@@ -11,7 +11,7 @@ ITALICRED="\e[3;${RED}m"
 #install depen*
 echo -e "\n${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar dmenu picom kitty feh -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar dmenu picom kitty zsh feh -y
 
 #make config dir
 
@@ -25,6 +25,14 @@ fi
 #cp all configs
 echo -e "\n${GREEN}Copying Config Files....${END}"
 cp -r config/* ~/.config
+
+#Install zsh
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+cp .zshrc ~/
+cp -r .oh-my-zsh ~/
+
 
 #wall
 echo -e "\n${GREEN}Copying walls....${END}"
