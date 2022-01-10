@@ -3,7 +3,7 @@
 
 #install depen*
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar dmenu picom xfce4-terminal feh -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar dmenu picom kitty feh -y
 
 #make config dir
 if [ -f ~/.config ]
