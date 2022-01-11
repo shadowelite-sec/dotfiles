@@ -16,7 +16,8 @@ FDIR="$HOME/.local/share/fonts"
 #install depen*
 echo -e "\n${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot -y
+clear
 
 #make config dir
 
@@ -47,6 +48,11 @@ cp -r config/* ~/.config
 #wall
 echo -e "\n${GREEN}Copying walls....${END}"
 cp -r wall/ ~/Pictures/
+
+
+#additionl pkgs
+
+sudo apt install cava cmus cmatrix 
 
 #Install zsh
 
