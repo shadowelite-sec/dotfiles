@@ -55,11 +55,13 @@ cp -r wall/ ~/Pictures/
 sudo apt install cava cmus cmatrix 
 
 #Install zsh
+function run(){
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
 
 #cp .zshrc ~/
 #cp -r .oh-my-zsh ~/
+}
 
-
+echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
 
