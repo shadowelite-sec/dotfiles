@@ -19,8 +19,12 @@ super + Escape
 #
 # bspwm hotkeys
 #
+#flameshot
 super + s
 	flameshot gui
+#firefox
+super + f
+	firefox
 
 # quit/restart bspwm
 super + alt + {q,r}
