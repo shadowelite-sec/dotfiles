@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 RED="\e[31m"
@@ -39,6 +40,9 @@ else
 	cp -rf $DIR/.local/share/fonts/* "$FDIR"
 fi
 
+#Install local bin
+echo -e "\n${GREEN}Copying local bin${END}"
+cp -r .local/bin ~/.local/
 
 #cp all configs
 echo -e "\n${GREEN}Copying Config Files....${END}"
