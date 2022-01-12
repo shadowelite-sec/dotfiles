@@ -16,7 +16,7 @@ FDIR="$HOME/.local/share/fonts"
 #install depen*
 echo -e "\n${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 jq sxiv fzf -y
 clear
 
 #make config dir
