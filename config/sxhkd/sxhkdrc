@@ -19,6 +19,22 @@ super + Escape
 #
 # bspwm hotkeys
 #
+#volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +5%
+
+XF86AudioLowerVolume
+        pactl set-sink-volume 0 -5%
+
+XF86AudioMute
+        pactl set-sink-mute 0 toggle
+#vm
+super + i
+	pactl set-sink-volume 0 +5%
+super + d
+	pactl set-sink-volume 0 -5%
+
+
 #flameshot
 super + s
 	flameshot gui
