@@ -33,7 +33,9 @@ super + i
 	pactl set-sink-volume 0 +5%
 super + d
 	pactl set-sink-volume 0 -5%
-
+#wifi
+super + e
+	bash .config/rofi/rofi-wifi-menu.sh
 
 #flameshot
 super + s
