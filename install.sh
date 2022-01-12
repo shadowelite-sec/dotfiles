@@ -17,7 +17,7 @@ FDIR="$HOME/.local/share/fonts"
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 jq sxiv fzf -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 jq sxiv fzf python3-pip xhk libx11-dev libxrex-dev libxext-dev -y
 clear
 
 #make config dir
@@ -56,7 +56,13 @@ cp -r wall/ ~/Pictures/
 
 #additionl pkgs
 
-sudo apt install cava cmus cmatrix 
+echo "${YELLOW}Installing additional pkgs....${END}"
+sudo apt install cava cmus cmatrix -y
+
+#pip3 modules
+
+pip3 install pywal ueberzug
+
 
 #Install zsh
 function run(){
