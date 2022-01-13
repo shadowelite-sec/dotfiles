@@ -29,17 +29,24 @@ XF86AudioLowerVolume
 XF86AudioMute
         pactl set-sink-mute 0 toggle
 #vm
-{F3,F2}
-	pactl set-sink-volume 0 {+5%,-5%}
+super + F3
+	pactl set-sink-volume 0 +5%
+super + F2
+	pactl set-sink-volume 0 -5%
 #wifi
 super + e
 	bash .config/rofi/rofi-wifi-menu.sh
 #brightness 
-{F8,F7}
-	brightnessctl set {+10%,10%-}
+super + F8
+	brightnessctl set +10%
+super + F7
+	brightnessctl set 10-%
 #backlight
-super + {Up,Down}
+super + {,Down7;9u7;9u3;9u}
+
 	brightnessctl --device='asus::kbd_backlight' set {+1,1-}
+
+
 #flameshot
 super + s
 	flameshot gui
