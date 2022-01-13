@@ -29,14 +29,18 @@ XF86AudioLowerVolume
 XF86AudioMute
         pactl set-sink-mute 0 toggle
 #vm
-super + i
+super + F3
 	pactl set-sink-volume 0 +5%
-super + d
+super + F2
 	pactl set-sink-volume 0 -5%
 #wifi
 super + e
 	bash .config/rofi/rofi-wifi-menu.sh
-
+#brightness 
+super + F8
+	brightnessctl set +10%
+super + F7
+	brightnessctl set 10-%
 #flameshot
 super + s
 	flameshot gui
