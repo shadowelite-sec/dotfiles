@@ -66,6 +66,10 @@ sudo apt install cava cmus cmatrix -y
 
 pip3 install pywal ueberzug
 
+#backlight auto
+cp -r rc.local /etc/
+
+sudo chmod 777 /etc/rc.local
 
 #Install zsh
 function run(){
