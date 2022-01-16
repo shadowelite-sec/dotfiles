@@ -60,7 +60,7 @@ cp -r wall/ ~/Pictures/
 #additionl pkgs
 
 echo "${YELLOW}Installing additional pkgs....${END}"
-sudo apt install cava cmus cmatrix -y
+sudo apt install cava cmus cmatrix ranger -y
 
 #pip3 modules
 
