@@ -108,10 +108,4 @@ alias icat="kitty +kitten icat"
 
 source ~/.cache/wal/colors-tty.sh
 
-wal-tile() {
-
-	wal -n -i "$@"
-	feh --bg-tile "$(< ""${HOME}/.cache/wal/wal)"
-
-}
 
