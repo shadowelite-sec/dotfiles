@@ -66,6 +66,11 @@ sudo apt install cava cmus cmatrix ranger -y
 
 pip3 install pywal ueberzug
 
+#install pywalfox
+
+pip install pywalfox
+pywalfox install
+
 #backlight auto
 cp -r rc.local /etc/
 

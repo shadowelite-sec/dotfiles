@@ -7,6 +7,7 @@ wal -R
 xrandr --rate 144 &
 picom --experimental-backends --blur-method kernel &
 pkill -9 dunst
+wal-telegram
 dunst &
 bspc monitor -d I II III IV V VI VII VIII IX X
 
