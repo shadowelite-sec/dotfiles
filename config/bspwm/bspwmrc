@@ -2,8 +2,9 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 ~/.config/polybar/cuts/launch.sh
-feh --bg-fill --randomize ~/Pictures/wall/wallhaven-x*
-#xrandr --rate 144 &
+wal -R
+#feh --bg-fill --randomize ~/Pictures/wall/wallhaven-x*
+xrandr --rate 144 &
 picom --experimental-backends --blur-method kernel &
 pkill -9 dunst
 dunst &

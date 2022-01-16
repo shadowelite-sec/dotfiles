@@ -77,5 +77,6 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 }
 run
 
-echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
-echo 'alias icat="kitty +kitten icat"' >> ~/.zshrc
+cp -r .zshrc ~/
+#echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
+#echo 'alias icat="kitty +kitten icat"' >> ~/.zshrc
