@@ -5,7 +5,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 feh --bg-fill --randomize ~/Pictures/wall/wallhaven-x*
 #xrandr --rate 144 &
 picom --experimental-backends --blur-method kernel &
-
+pkill -9 dunst
+dunst &
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width        2
@@ -29,4 +30,4 @@ xsetroot -cursor_name left_ptr
 
 #send notify
 
-notify-send "bspwm booted 😁"
+notify-send -u low "bspwm booted 😁"
