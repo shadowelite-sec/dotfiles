@@ -38,7 +38,7 @@ atleast=1920x1080
 sh_menu () {
 	#: | dmenu -p "search wallhaven:"
 	# ROFI: comment the previous line and uncomment the next line for rofi
-	 rofi -theme ~/.config/polybar/cuts/scripts/rofi/launcher.rasi -dmenu -l 0 -p "search wallpapers"
+	 rofi -theme ~/.config/rofi/config.rasi -dmenu -l 0 -p "search wallpapers"
 }
 
 ##########################

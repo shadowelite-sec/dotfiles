@@ -9,7 +9,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/cuts/scripts/rofi/launcher.rasi
+	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/config.rasi
 #	dmenu_run
 
 # make sxhkd reload its configuration files:
@@ -33,7 +33,7 @@ XF86AudioMute
 	pactl set-sink-volume 0 {+5%,-5%}
 #wifi
 super + e
-	bash .config/rofi/rofi-wifi-menu.sh
+	bash .local/bin/wifimenu
 #brightness 
 {F8,F7}
 	brightnessctl set {+10%,10%-}
