@@ -41,7 +41,7 @@ super + e
 super + {Up,Down}
 	brightnessctl --device='asus::kbd_backlight' set {+1,1-}
 #flameshot
-super + s
+Print
 	flameshot gui
 #firefox
 super + f
