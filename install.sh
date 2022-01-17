@@ -82,6 +82,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 }
 run
 
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
 cp -r .zshrc ~/
+
 #echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
 #echo 'alias icat="kitty +kitten icat"' >> ~/.zshrc
