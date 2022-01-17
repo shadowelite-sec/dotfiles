@@ -20,9 +20,6 @@ echo -e "${RED}Installing Dependencies....${END}"
 sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 jq sxiv fzf python3-pip npm xhk libx11-dev libxrex-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst -y
 clear
 
-#adding permission 
-sudo chmod 777 /sys/class/leds/asus::kbd_backlight/brightness
-
 #make config dir
 
 if [ -f ~/.config ]
