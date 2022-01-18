@@ -2,8 +2,6 @@
 
 # Color files
 PFILE="$HOME/.config/polybar/cuts/colors.ini"
-RFILE="$HOME/.config/rofi/colors.rasi"
-
 # Get colors
 pywal_get() {
 	wal -i "$1" -q -t 
@@ -17,7 +15,6 @@ change_color() {
 	sed -i -e "s/foreground = #.*/foreground = #${FG}/g" $PFILE
 	sed -i -e "s/foreground-alt = #.*/foreground-alt = #33${FG}/g" $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
-	
 	polybar-msg cmd restart
 }
 
@@ -34,3 +31,4 @@ BG=${BGC:1}
 FGC=`printf "%s\n" "$foreground"`
 FG=${FGC:1}
 AC=`printf "%s\n" "$color1"`
+change_color
