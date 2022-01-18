@@ -47,6 +47,10 @@ Print
 super + f
 	firefox
 
+#reaad
+super + r
+	zathura "~/Documents/$(ls Documents | rofi -dmenu -i -p "Select The Book" 2>/dev/null)"  
+
 #emoji
 super + z
 	emocli -li | rofi -dmenu -window-title emoji | cut -d' ' -f1 | tr -d '\n' | xclip -selection clipboard
