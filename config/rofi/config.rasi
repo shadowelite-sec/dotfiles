@@ -5,17 +5,18 @@ configuration {
   show-icons: true;
   font: "JetBrainsMono Nerd Font 10";
 }
-
-@theme "/dev/null"
-
 * {
   bg: #151515;
   fg: #E8E3E3;
   al: #2e2e2e;
   background-color: @bg;
   text-color: @fg;
-}
+} 
 
+//@import "colors.rasi"
+@theme "/dev/null"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+//@import "~/.cache/wal/colors-rofi-light.rasi"
 window {
   location: north;
   width: 100%;

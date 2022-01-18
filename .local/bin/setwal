@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Color files
+PFILE="$HOME/.config/polybar/cuts/colors.ini"
+RFILE="$HOME/.config/rofi/colors.rasi"
+
+# Get colors
+pywal_get() {
+	wal -i "$1" -q -t 
+}
+
+# Change colors
+change_color() {
+	# polybar
+	sed -i -e "s/background = #.*/background = #${BG}/g" $PFILE
+	sed -i -e "s/background-alt = #.*/background-alt = #8C${BG}/g" $PFILE
+	sed -i -e "s/foreground = #.*/foreground = #${FG}/g" $PFILE
+	sed -i -e "s/foreground-alt = #.*/foreground-alt = #33${FG}/g" $PFILE
+	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
+	
+	polybar-msg cmd restart
+}
+
+# Main
+pywal_get "$1"
+wal-telegram
+# Source the pywal color file
+. "$HOME/.cache/wal/colors.sh"
+bspc config focused_border_color "$color1"
+bspc config active_border_color "#000000"
+bspc config normal_border_color "#000000"
+BGC=`printf "%s\n" "$background"`
+BG=${BGC:1}
+FGC=`printf "%s\n" "$foreground"`
+FG=${FGC:1}
+AC=`printf "%s\n" "$color1"`
