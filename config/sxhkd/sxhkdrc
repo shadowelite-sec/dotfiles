@@ -47,6 +47,11 @@ Print
 super + f
 	firefox
 
+#emoji
+super + z
+	emocli -li | rofi -dmenu -window-title emoji | cut -d' ' -f1 | tr -d '\n' | xclip -selection clipboard
+
+
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
