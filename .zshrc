@@ -108,4 +108,18 @@ alias icat="kitty +kitten icat"
 
 source ~/.cache/wal/colors-tty.sh
 
+fcd(){
+
+	cd $(find $HOME -type d | fzf)
+
+}
+
+fop(){
+
+	nano $(find $HOME -type f | fzf)
+
+}
+
+alias hs="history | cut -c 8- | sort | uniq | fzf | tr -d '\\n' | xclip -selection c"
+
 
