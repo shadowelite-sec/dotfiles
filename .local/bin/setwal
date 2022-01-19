@@ -21,6 +21,7 @@ change_color() {
 # Main
 pywal_get "$1"
 wal-telegram
+wdunst
 # Source the pywal color file
 . "$HOME/.cache/wal/colors.sh"
 bspc config focused_border_color "$color1"

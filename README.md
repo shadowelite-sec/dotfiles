@@ -26,6 +26,7 @@ bash install.sh
 
 ```
 dotfiles
+├── 2022-01-19_10-51.png
 ├── config
 │   ├── bspwm
 │   │   └── bspwmrc
@@ -70,12 +71,47 @@ dotfiles
 │   └── wal-telegram
 │       ├── colors.tdesktop-palette
 │       └── colors.wal-constants
+├── .gitignore
 ├── install.sh
+├── .local
+│   ├── bin
+│   │   ├── alert
+│   │   ├── ani-cli
+│   │   ├── cmus-notify
+│   │   ├── float
+│   │   ├── pfetch
+│   │   ├── pipes
+│   │   ├── setwal
+│   │   ├── tty-clock
+│   │   ├── ueberzug
+│   │   ├── wal
+│   │   ├── waldl
+│   │   ├── wal-telegram
+│   │   ├── wdunst
+│   │   ├── wifimenu
+│   │   └── ytfzf
+│   └── share
+│       ├── fonts
+│       │   ├── fantasque_sans_mono.ttf
+│       │   ├── feather.ttf
+│       │   ├── iosevka_nerd_font.ttf
+│       │   ├── material_design_iconic_font.ttf
+│       │   ├── panels
+│       │   │   ├── droid_sans.ttf
+│       │   │   ├── icomoon_feather.ttf
+│       │   │   ├── material.ttf
+│       │   │   └── noto_sans.ttf
+│       │   └── waffle.bdf
+│       ├── sounds
+│       │   └── notify.ogg
+│       └── wal-telegram
+│           └── colors.wal-constants
 ├── rc.local
 ├── README.md
-└── wall
-    ├── r4tiemba73b81.png
-    ├── wallhaven-4d5lgl.jpg
-    ├── wallhaven-r26pzq.png
-    └── wallhaven-xllw3d.jpg
+├── wall
+│   ├── r4tiemba73b81.png
+│   ├── wallhaven-4d5lgl.jpg
+│   ├── wallhaven-r26pzq.png
+│   └── wallhaven-xllw3d.jpg
+└── .zshrc
 ```
