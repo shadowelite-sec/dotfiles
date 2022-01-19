@@ -1,11 +1,28 @@
-# dotfiles
-Dotfiles
+# Dotfiles
+My Dotfiles
 
-### January 2022
+## January 2022
 
 ![screenshot](https://raw.githubusercontent.com/shadowelite-sec/dotfiles/main/2022-01-19_10-51.png)
 
-# Tree
+
+## Installation
+```
+git clone https://github.com/shadowelite-sec/dotfiles 
+```
+```
+cd dotfiles
+```
+```
+bash install.sh
+```
+
+### Additional
+ * firefox theme https://github.com/migueravila/SimpleFox.git
+ * pywal for firefox https://addons.mozilla.org/en-US/firefox/addon/pywalfox/
+ 
+
+# TREE
 
 ```
 dotfiles
