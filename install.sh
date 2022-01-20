@@ -17,7 +17,7 @@ FDIR="$HOME/.local/share/fonts"
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf python3-pip npm xhk fonts-lohit-mlym libx11-dev libxrex-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf python3-pip npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst python3 python3-pip -y
 clear
 
 #make config dir
@@ -72,7 +72,7 @@ pywalfox install
 sudo npm install -g @duhdugg/emocli
 echo "Done 🐉"
 #backlight auto
-cp -r rc.local /etc/
+sudo cp -r rc.local /etc/
 
 sudo chmod 777 /etc/rc.local
 
