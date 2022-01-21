@@ -57,7 +57,7 @@ cp -r wall/ ~/Pictures/
 #additionl pkgs
 
 echo "${YELLOW}Installing additional pkgs....${END}"
-sudo apt install cava cmus cmatrix ranger -y
+sudo apt install cava cmus cmatrix ranger telegram-desktop -y
 
 #pip3 modules
 
