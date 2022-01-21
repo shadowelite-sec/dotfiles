@@ -20,7 +20,7 @@ bash install.sh
 ### Additional
  * firefox theme https://github.com/migueravila/SimpleFox.git
  * pywal for firefox https://addons.mozilla.org/en-US/firefox/addon/pywalfox/
- * Type This Inside **cmus** :set status_display_program=/usr/local/bin/cmus-notify
+ * Type This Inside **cmus** :set status_display_program=~/.local/bin/cmus-notify
 
 # TREE
 
