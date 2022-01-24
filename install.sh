@@ -17,8 +17,8 @@ FDIR="$HOME/.local/share/fonts"
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf python3-pip npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst zathura xclip python3 python3-pip nvim mpd ncmpcpp -y
-clear
+sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst zathura xclip python3 python3-pip neovim mpd ncmpcpp thermald xautolock i3lock -y
+#clear
 
 #make config dir
 
@@ -40,10 +40,11 @@ else
 	cp -rf $DIR/.local/share/fonts/* "$FDIR"
 fi
 
-#Install local bin
-echo -e "\n${GREEN}Copying local bin${END}"
-cp -r .local/bin ~/.local/
-
+#Install local 
+echo -e "\n${GREEN}Copying local....${END}"
+sudo cp -r .local/bin ~/.local/
+cp -r .local/share/sounds ~/.local/share/
+cp -r .local/share/icons ~/.local/share/
 #cp all configs
 echo -e "\n${GREEN}Copying Config Files....${END}"
 cp -r config/* ~/.config
