@@ -1,15 +1,27 @@
 #! /bin/sh
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 ~/.config/polybar/cuts/launch.sh
 . "$HOME"/.cache/wal/colors.sh
 wal -R
+
 #feh --bg-fill --randomize ~/Pictures/wall/wallhaven-x*
 xrandr --rate 144 &
 picom --experimental-backends --blur-method kernel &
+
+#kill
 pkill -9 dunst
+pkill -9 xautolock
+pkill -9 mpd
+
+#run
 wal-telegram
 dunst &
 wdunst
+mpd & 2>/dev/null
+
+#bspc config
+
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width        2
@@ -31,7 +43,8 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 xsetroot -cursor_name left_ptr
+xautolock -detectsleep -time 10 -locker i3lock-fancy -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
 
 #send notify
 
-notify-send -u low "bspwm booted 😁"
+notify-send "bspwm booted ⚡"
