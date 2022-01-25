@@ -55,6 +55,9 @@ super + r
 super + z
 	emocli -li | rofi -dmenu -window-title emoji | cut -d' ' -f1 | tr -d '\n' | xclip -selection clipboard
 
+#lock
+super + l
+	i3lock-fancy
 
 # quit/restart bspwm
 super + alt + {q,r}
