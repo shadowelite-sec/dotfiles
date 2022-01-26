@@ -42,12 +42,12 @@ let g:startify_lists = [
 
 "Book mark
 let g:startify_bookmarks = [
-            \ { 'c': '~/.config/bspwm/bspwmrc' },
-            \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'z': '~/.zshrc' },
-	    \ { '~/ctf',
-	    \ { '~/code',
-	    \ ]
+            \ { 'a': '~/.config/bspwm/bspwmrc' },
+            \ { 'b': '~/.config/nvim/init.vim' },
+            \ { 'c': '~/.zshrc' },
+	    \ { 'd': '~/ctf' },
+	    \ { 'e': '~/code' },
+	    \]
 "Header
 let g:startify_custom_header = [
    \"   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
@@ -64,9 +64,6 @@ let g:startify_custom_header = [
    \"I don't know way but i like Dragons",
    \]
 
-"if exists("loaded_nerd_tree")
-"	autocmd vimenter * NERDTree
-"endif
 
 " onedark.vim override: Don't set a background color when running in a terminal;
 " just use the terminal's background color
