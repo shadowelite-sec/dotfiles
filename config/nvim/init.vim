@@ -1,6 +1,5 @@
 call plug#begin()
 
-Plug 'mangeshrex/uwu.vim'
 Plug 'ap/vim-css-color'
 Plug 'junegunn/fzf'
 Plug 'scrooloose/NERDTree'
