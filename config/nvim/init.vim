@@ -6,6 +6,7 @@ Plug 'junegunn/fzf'
 Plug 'scrooloose/NERDTree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
