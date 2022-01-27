@@ -17,7 +17,7 @@ FDIR="$HOME/.local/share/fonts"
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst zathura xclip python3 python3-pip neovim mpd ncmpcpp thermald xautolock i3lock -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst zathura xclip python3 python3-pip neovim mpd ncmpcpp thermald xautolock i3lock stow -y
 #clear
 
 #make config dir
@@ -47,8 +47,7 @@ cp -r .local/share/sounds ~/.local/share/
 cp -r .local/share/icons ~/.local/share/
 #cp all configs
 echo -e "\n${GREEN}Copying Config Files....${END}"
-cp -r config/* ~/.config
-
+stow */
 
 #wall
 echo -e "\n${GREEN}Copying walls....${END}"
@@ -58,7 +57,7 @@ cp -r wall/ ~/Pictures/
 #additionl pkgs
 
 echo "${YELLOW}Installing additional pkgs....${END}"
-sudo apt install cava cmus cmatrix ranger telegram-desktop -y
+sudo a:pt install cava cmus cmatrix ranger telegram-desktop -y
 
 #nvim plug
 
