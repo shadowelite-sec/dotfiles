@@ -37,11 +37,6 @@ sudo apt install cava cmus cmatrix ranger telegram-desktop -y
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-sleep 0.5 
-
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-
 #pip3 modules
 sleep 0.5
 
