@@ -2,3 +2,12 @@
 *.save
 *.save.*
 *.log
+cache
+background.*
+search-history
+command-history
+autosave
+lib.pl
+mpd.db
+mpd.pid
+mpdstate
