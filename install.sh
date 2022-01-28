@@ -8,11 +8,6 @@ MAGENTA="\e[35m"
 BOLDGREEN="\e[1;${GREEN}m"
 ITALICRED="\e[3;${RED}m"
 
-#dirs
-
-DIR=`pwd`
-FDIR="$HOME/.local/share/fonts"
-
 #install depen*
 
 echo -e "${RED}Installing Dependencies....${END}"
@@ -29,35 +24,14 @@ else
 	echo -e "\n${RED}File already exist. skiping....${END}"
 fi
 
-
-#Installing Fonts
-echo -e "\n${YELLOW}Installing fonts...${END}"
-if [ -d "$FDIR" ]
-then
-	cp -rf $DIR/.local/share/fonts/* "$FDIR"
-else
-	mkdir -p "$FDIR"
-	cp -rf $DIR/.local/share/fonts/* "$FDIR"
-fi
-
 #Install local 
-echo -e "\n${GREEN}Copying local....${END}"
-sudo cp -r .local/bin ~/.local/
-cp -r .local/share/sounds ~/.local/share/
-cp -r .local/share/icons ~/.local/share/
-#cp all configs
 echo -e "\n${GREEN}Copying Config Files....${END}"
 stow */
-
-#wall
-echo -e "\n${GREEN}Copying walls....${END}"
-cp -r wall/ ~/Pictures/
-
 
 #additionl pkgs
 
 echo "${YELLOW}Installing additional pkgs....${END}"
-sudo a:pt install cava cmus cmatrix ranger telegram-desktop -y
+sudo apt install cava cmus cmatrix ranger telegram-desktop -y
 
 #nvim plug
 
@@ -69,15 +43,17 @@ sleep 0.5
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 
 #pip3 modules
+sleep 0.5
 
 pip3 install pywal ueberzug
 
 #install pywalfox
 
-pip install pywalfox
+sudo pip install pywalfox
 pywalfox install
 
 #install emoji
+sleep 0.5
 sudo npm install -g @duhdugg/emocli
 echo "Done 🐉"
 #backlight auto
