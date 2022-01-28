@@ -12,7 +12,7 @@ ITALICRED="\e[3;${RED}m"
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst zathura xclip python3 python3-pip neovim mpd ncmpcpp thermald xautolock i3lock stow -y
+sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst zathura xclip python3 python3-pip neovim mpd ncmpcpp thermald xautolock xdotool i3lock stow -y
 #clear
 
 #make config dir
