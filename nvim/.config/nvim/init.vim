@@ -1,13 +1,15 @@
 call plug#begin()
 
 Plug 'ap/vim-css-color'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'scrooloose/NERDTree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'glepnir/spaceline.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -19,10 +21,26 @@ call plug#end()
 "autocmd VimEnter * NERDTree
 "autocmd VimEnter * wincmd p
 
+"keys
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-s> :Startify<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 "Space
 let g:spaceline_seperate_style = 'slant'
 let g:spaceline_colorscheme = 'one'
 let g:spaceline_scroll_chars = ['⎺', '⎻', '⎼', '⎽', '⎯'] " on Linux
+
+" buffer  line configurations 
+let g:bufferline_fixed_index =  0 "always first
+let g:bufferline_fixed_index =  1 "always second (default)
+let g:bufferline_fixed_index = -1 "always last
+let g:bufferline_modified = '+'
+let g:bufferline_show_bufnr = 1 
+let g:bufferline_active_buffer_left = '['
+let g:bufferline_active_buffer_right = '󰍟'
+let g:bufferline_modified = '󰄴 '
 
 "Startify
 let g:startify_session_dir = '~/.config/nvim/session'
