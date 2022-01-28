@@ -16,8 +16,8 @@ call plug#end()
 :set clipboard=unnamedplus
 
 "cmd
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
 
 "Space
 let g:spaceline_seperate_style = 'slant'
