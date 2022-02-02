@@ -7,7 +7,7 @@ wal -R
 
 #feh --bg-fill --randomize ~/Pictures/wall/wallhaven-x*
 xrandr --rate 144 &
-picom --experimental-backends --blur-method kernel &
+picom --experimental-backends --blur-method dual_kawase --blur-strength 3 &
 
 #kill
 pkill -9 dunst
