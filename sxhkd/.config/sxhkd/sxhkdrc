@@ -49,7 +49,7 @@ super + f
 
 #reaad
 super + r
-	zathura "~/Documents/$(ls Documents | rofi -dmenu -no-lazy-grab -p "Select The Book" 2>/dev/null)"  
+	zathura "~/Documents/$(ls Documents | rofi -dmenu -i -p "Select The Book" 2>/dev/null)"  
 
 #aot
 super + a 
