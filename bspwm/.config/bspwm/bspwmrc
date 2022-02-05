@@ -38,7 +38,7 @@ bspc config normal_border_color "#000000"
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a TelegramDesktop state=floating rectangle=500x800+0+0 
-bspc rule -a mpv state=floating
+bspc rule -a mpv state=floating rectangle=1500x840+0+0
 
 xsetroot -cursor_name left_ptr
 xautolock -detectsleep -time 10 -locker i3lock-fancy -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
