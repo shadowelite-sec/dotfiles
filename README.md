@@ -1,5 +1,5 @@
 # Dotfiles
-My Dotfiles
+My Dotfiles 🍚
 
 ## January 2022
 
