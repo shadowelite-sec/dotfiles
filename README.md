@@ -22,7 +22,7 @@ bash install.sh
  * pywal for firefox https://addons.mozilla.org/en-US/firefox/addon/pywalfox/
  * Type This Inside **cmus** ```:set status_display_program=~/.local/bin/cmus-notify```
 
-# TREE
+### TREE
 
 ```
 dotfiles
