@@ -1,5 +1,5 @@
 # zathurarc
-
+set selection-clipboard clipboard
 # colors
 set statusbar-bg "#00FF00"
 #set statusbar-fg red

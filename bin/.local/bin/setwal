@@ -22,6 +22,7 @@ change_color() {
 pywal_get "$1"
 wal-telegram
 wdunst
+pomotroid-wal 
 # Source the pywal color file
 . "$HOME/.cache/wal/colors.sh"
 bspc config focused_border_color "$color1"
