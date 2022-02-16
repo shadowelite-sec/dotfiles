@@ -48,5 +48,4 @@ fop(){
 
 alias hs="history | cut -c 8- | sort | uniq | fzf | tr -d '\\n' | xclip -selection c"
 
-./crunchbang-mini
 
