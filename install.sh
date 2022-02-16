@@ -57,10 +57,10 @@ sudo cp -r rc.local /etc/
 sudo chmod 777 /etc/rc.local
 
 #Install zsh
-function run(){
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
-}
-run
+#function run(){
+#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+#}
+#run
 
 #git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 
