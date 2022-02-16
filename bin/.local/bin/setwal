@@ -34,5 +34,5 @@ BG=${BGC:1}
 FGC=`printf "%s\n" "$foreground"`
 FG=${FGC:1}
 AC=`printf "%s\n" "$color1"`
-CC=`printf "%s\n" "$color1"`
+CC=`printf "%s\n" "$color2"`
 change_color
