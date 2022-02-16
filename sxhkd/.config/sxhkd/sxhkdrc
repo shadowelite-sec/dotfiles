@@ -60,6 +60,9 @@ super + a
 #emoji
 super + z
 	emocli -li | rofi -dmenu -window-title emoji | cut -d' ' -f1 | tr -d '\n' | xclip -selection clipboard
+#Telegram
+alt + t
+	telegram-desktop
 
 #lock
 super + l
