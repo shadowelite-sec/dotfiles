@@ -46,7 +46,10 @@ Print
 #firefox
 super + f
 	firefox
+#wall
 
+ctrl + alt + w
+	waldl
 #reaad
 super + r
 	zathura "~/Documents/$(ls Documents | rofi -dmenu -i -p "Select The Book" 2>/dev/null)"  

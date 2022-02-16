@@ -1,13 +1,14 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-~/.config/polybar/cuts/launch.sh
+~/.config/polybar/launch.sh
 . "$HOME"/.cache/wal/colors.sh
 wal -R
-killall picom
+pkill -9 picom
 #feh --bg-fill --randomize ~/Pictures/wall/wallhaven-x*
 xrandr --rate 144 &
-picom --experimental-backends --blur-method dual_kawase --blur-strength 3 &
+picom  --experimental-backends &
+#picom --experimental-backends --blur-method dual_kawase --blur-strength 3 &
 
 #kill
 pkill -9 dunst
@@ -25,7 +26,7 @@ mpd & 2>/dev/null
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width        2
-bspc config window_gap          12
+bspc config window_gap          12 
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -39,7 +40,7 @@ bspc config normal_border_color "#000000"
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a TelegramDesktop state=floating rectangle=500x800+0+0 
 bspc rule -a mpv state=floating rectangle=1500x840+0+0
-
+#bspc rule -a kitty state=floating rectangle=500x800+0+0 
 xsetroot -cursor_name left_ptr
 xautolock -detectsleep -time 10 -locker i3lock-fancy -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
 
