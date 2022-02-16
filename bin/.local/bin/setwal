@@ -14,6 +14,7 @@ change_color() {
 	sed -i -e "s/background-alt = #.*/background-alt = #8C${BG}/g" $PFILE
 	sed -i -e "s/foreground = #.*/foreground = #${FG}/g" $PFILE
 	sed -i -e "s/foreground-alt = #.*/foreground-alt = #33${FG}/g" $PFILE
+	sed -i -e "s/occupied-foreground = #.*/occupied-foreground = ${CC}/g" $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
 	polybar-msg cmd restart
 }
@@ -33,4 +34,5 @@ BG=${BGC:1}
 FGC=`printf "%s\n" "$foreground"`
 FG=${FGC:1}
 AC=`printf "%s\n" "$color1"`
+CC=`printf "%s\n" "$color1"`
 change_color
