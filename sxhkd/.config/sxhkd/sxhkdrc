@@ -64,6 +64,9 @@ super + z
 alt + t
 	telegram-desktop
 
+#random wal
+alt + x
+	random
 #lock
 super + l
 	i3lock-fancy
