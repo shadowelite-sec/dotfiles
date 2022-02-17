@@ -16,14 +16,14 @@ change_color() {
 	sed -i -e "s/foreground-alt = #.*/foreground-alt = #33${FG}/g" $PFILE
 	sed -i -e "s/occupied-foreground = #.*/occupied-foreground = ${CC}/g" $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
-	polybar-msg cmd restart
+	polybar-msg cmd restart >/dev/null
 }
 
 # Main
-pywal_get "$1"
-wal-telegram
+pywal_get "$1" >/dev/null
+wal-telegram >/dev/null
 wdunst
-pomotroid-wal 
+pomotroid-wal >/dev/null 
 # Source the pywal color file
 . "$HOME/.cache/wal/colors.sh"
 bspc config focused_border_color "$color1"
@@ -36,3 +36,5 @@ FG=${FGC:1}
 AC=`printf "%s\n" "$color1"`
 CC=`printf "%s\n" "$color2"`
 change_color
+convert -size 75x75 "$1" /tmp/wall.jpg >/dev/null
+notify-send -i /tmp/wall.jpg -t 3000 "Applied New Wallpaper 🎨"
