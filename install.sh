@@ -56,17 +56,4 @@ sudo cp -r rc.local /etc/
 
 sudo chmod 777 /etc/rc.local
 
-#Install zsh
-#function run(){
-#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
-#}
-#run
-
-#git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-
-#ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-cp -r .zshrc ~/
-
-#echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.zshrc
-#echo 'alias icat="kitty +kitten icat"' >> ~/.zshrc
+echo "${BOLDGREEN}ALL DONE${END}"
