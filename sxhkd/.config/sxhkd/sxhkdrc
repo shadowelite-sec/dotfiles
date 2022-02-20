@@ -67,6 +67,8 @@ alt + t
 #random wal
 alt + x
 	random
+alt + w
+	setwal $(sxiv -t -q -o ~/wall)
 #lock
 super + l
 	i3lock-fancy
