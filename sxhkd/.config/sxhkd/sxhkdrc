@@ -31,6 +31,8 @@ XF86AudioMute
 #vm
 {F3,F2}
 	pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo {+5%,-5%}
+F1
+	pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle
 #wifi
 super + e
 	bash .local/bin/wifimenu
