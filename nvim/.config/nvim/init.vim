@@ -7,10 +7,11 @@ Plug 'scrooloose/NERDTree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
-Plug 'glepnir/spaceline.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'voldikss/vim-floaterm'
-
+Plug 'vim-airline/vim-airline' 
+Plug 'vim-airline/vim-airline-themes'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 "set
@@ -28,9 +29,12 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 "Space
-let g:spaceline_seperate_style = 'slant'
-let g:spaceline_colorscheme = 'one'
-let g:spaceline_scroll_chars = ['⎺', '⎻', '⎼', '⎽', '⎯'] " on Linux
+"let g:spaceline_seperate_style = 'slant'
+"let g:spaceline_colorscheme = 'one'
+"let g:spaceline_scroll_chars = ['⎺', '⎻', '⎼', '⎽', '⎯'] " on Linux
+
+"airline
+let g:airline_theme = 'jellybeans'
 
 " buffer  line configurations 
 let g:bufferline_fixed_index =  0 "always first
