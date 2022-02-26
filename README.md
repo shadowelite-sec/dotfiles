@@ -1,5 +1,5 @@
-# Dotfiles
-My Dotfiles 🍚
+# ~/.files
+My DotFiles 🍚
 
 ## January 2022
 
