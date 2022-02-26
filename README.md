@@ -5,6 +5,9 @@ My Dotfiles 🍚
 
 ![screenshot](https://raw.githubusercontent.com/shadowelite-sec/dotfiles/main/2022-01-19_10-51.png)
 
+## February 2022
+
+![screenshot](https://raw.githubusercontent.com/shadowelite-sec/dotfiles/main/2022-02-26_11-23.png)
 
 ## Installation
 ```
