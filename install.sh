@@ -53,7 +53,7 @@ sudo npm install -g @duhdugg/emocli
 echo "Done 🐉"
 #backlight auto
 sudo cp -r rc.local /etc/
-
 sudo chmod 777 /etc/rc.local
+sudo bash -c "echo "_JAVA_AWT_WM_NONREPARENTING=1" >>/etc/environment"
 
 echo "${BOLDGREEN}ALL DONE${END}"
