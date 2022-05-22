@@ -25,7 +25,9 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/flutter/bin
 alias icat="kitty +kitten icat"
 alias ls="ls --color=auto"
-
+alias history="history 100"
+alias vi="nvim"
+alias vim="nvim"
 #key
 bindkey "^[[1;5C" forward-word 
 bindkey "^[[1;5D" backward-word
@@ -47,6 +49,3 @@ fop(){
 }
 
 alias hs="history | cut -c 8- | sort | uniq | fzf | tr -d '\\n' | xclip -selection c"
-
-./crunchbang-mini
-motivate

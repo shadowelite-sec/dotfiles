@@ -8,14 +8,40 @@ MAGENTA="\e[35m"
 BOLDGREEN="\e[1;${GREEN}m"
 ITALICRED="\e[3;${RED}m"
 
+oldunst(){
+
+	cd /bin/
+	sudo rm dunst*
+	sudo sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunst
+	sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunstify
+	sudo wget https://raw.githubusercontent.com/shadowelite-sec/scripts/main/dunst/dunstctl
+}
+
+mpd_fix(){
+	mkdir ~/.config/mpd/playlists
+	mkdir ~/Music
+}
+
+git_cfg(){
+	git config --global user.email "alansedp@gmail.com"
+	git config --global user.name "shadowelite"
+	git config --global credential.helper store
+	git config --global core.editor nvim
+}
+
 #install depen*
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo apt update -y && sudo apt install bspwm sxhkd polybar rofi picom kitty zsh feh flameshot mpv aria2 piper jq sxiv fzf npm xhk fonts-lohit-mlym libx11-dev libxext-dev brightnessctl libnotify-bin notify-osd notification-daemon dunst zathura xclip python3 python3-pip neovim mpd ncmpcpp thermald xautolock xdotool i3lock stow -y
+sudo pacman -Syy && sudo pacman -S --noconfirm archlinux-keyring xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv aria2 piper jq sxiv lolcat noto-fonts-emoji fzf npm brightnessctl zathura xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool npm i3lock net-tools stow unzip zip gzip p7zip 
+
+#install old dusnt
+oldunst
+mpd_fix
+git_cfg
 #clear
 
-#make config dir
+#make config dir``
 
 if [ -f ~/.config ]
 then
@@ -24,6 +50,7 @@ else
 	echo -e "\n${RED}File already exist. skiping....${END}"
 fi
 
+
 #Install local 
 echo -e "\n${GREEN}Copying Config Files....${END}"
 stow */
@@ -31,7 +58,12 @@ stow */
 #additionl pkgs
 
 echo "${YELLOW}Installing additional pkgs....${END}"
-sudo apt install cava cmus cmatrix ranger telegram-desktop -y
+sudo pacman -S --noconfirm cmus cmatrix ranger telegram-desktop firefox thunar 
+
+#yay pkg
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+yay -S mugshot bspwm-rounded-corners cava toilet 
 
 #nvim plug
 
@@ -49,11 +81,14 @@ pywalfox install
 
 #install emoji
 sleep 0.5
-sudo npm install -g @duhdugg/emocli
+#sudo npm install -g @duhdugg/emocli
 echo "Done 🐉"
 #backlight auto
 sudo cp -r rc.local /etc/
 sudo chmod 777 /etc/rc.local
 sudo bash -c "echo "_JAVA_AWT_WM_NONREPARENTING=1" >>/etc/environment"
-
+sudo bash -c "echo "gtk-application-prefer-dark-theme=1" >> /usr/share/gtk-3.0/settings.ini"
+fc-cache -f -v 2>/dev/null
 echo "${BOLDGREEN}ALL DONE${END}"
+
+

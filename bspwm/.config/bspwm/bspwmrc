@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 pkill -USR1 -x sxhkd
-~/.config/polybar/launch.sh
+~/.config/polybar/launch.sh &
 . "$HOME"/.cache/wal/colors.sh
 wal -R
 pkill -9 picom
