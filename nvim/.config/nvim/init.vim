@@ -23,11 +23,10 @@ call plug#end()
 "autocmd VimEnter * wincmd p
 
 "keys
-nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-s> :Startify<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-
+nnoremap <C-n> :set number!<CR>
 "Space
 "let g:spaceline_seperate_style = 'slant'
 "let g:spaceline_colorscheme = 'one'

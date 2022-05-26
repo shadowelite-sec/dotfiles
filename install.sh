@@ -15,6 +15,7 @@ oldunst(){
 	sudo sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunst
 	sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunstify
 	sudo wget https://raw.githubusercontent.com/shadowelite-sec/scripts/main/dunst/dunstctl
+	sudo chmod +x /bin/dunst*
 }
 
 mpd_fix(){
@@ -29,16 +30,18 @@ git_cfg(){
 	git config --global core.editor nvim
 }
 
+
 #install depen*
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo pacman -Syy && sudo pacman -S --noconfirm archlinux-keyring xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv aria2 piper jq sxiv lolcat noto-fonts-emoji fzf npm brightnessctl zathura xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool npm i3lock net-tools stow unzip zip gzip p7zip 
+sudo pacman -Syy && sudo pacman -S --noconfirm archlinux-keyring xorg xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv aria2 piper jq sxiv lolcat noto-fonts-emoji fzf npm brightnessctl zathura xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool mpc npm i3lock net-tools bluez bluez-utils pulseaudio-bluetooth pulsemixer stow unzip zip gzip p7zip xf86-input-libinput  
 
 #install old dusnt
 oldunst
 mpd_fix
 git_cfg
+
 #clear
 
 #make config dir``
@@ -63,7 +66,7 @@ sudo pacman -S --noconfirm cmus cmatrix ranger telegram-desktop firefox thunar
 #yay pkg
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-yay -S mugshot bspwm-rounded-corners cava toilet 
+yay -S mugshot bspwm-rounded-corners cava toilet bluez-hciconfig bluez-hcitool android-bash-completion web-greeter 
 
 #nvim plug
 
@@ -91,4 +94,14 @@ sudo bash -c "echo "gtk-application-prefer-dark-theme=1" >> /usr/share/gtk-3.0/s
 fc-cache -f -v 2>/dev/null
 echo "${BOLDGREEN}ALL DONE${END}"
 
+read -p "Installation Finshed, Do You Want To Reboot Your System Now ?! " yn
 
+case $yn in
+	yes ) echo system rebooting in 5 sec ....;;
+	no ) echo skiping...;
+		exit;;
+	* ) echo invalid selection;
+		exit 1;;
+esac
+sleep 5
+reboot
