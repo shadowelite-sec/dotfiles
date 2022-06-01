@@ -28,14 +28,15 @@ alias ls="ls --color=auto"
 alias history="history 100"
 alias vi="nvim"
 alias vim="nvim"
-#key
-bindkey "^[[1;5C" forward-word 
-bindkey "^[[1;5D" backward-word
 
-(cat ~/.cache/wal/sequences &)
+#shortcuts
+gp(){
+grep -ir "$1"
+}
 
-source ~/.cache/wal/colors-tty.sh
-
+f(){
+	find $1 -name "$2" 2>/dev/null
+}
 fcd(){
 
         cd $(find $HOME -type d | fzf)
@@ -47,5 +48,13 @@ fop(){
         nano $(find $HOME -type f | fzf)
 
 }
+
+#key
+bindkey "^[[1;5C" forward-word 
+bindkey "^[[1;5D" backward-word
+
+(cat ~/.cache/wal/sequences &)
+
+source ~/.cache/wal/colors-tty.sh
 
 alias hs="history | cut -c 8- | sort | uniq | fzf | tr -d '\\n' | xclip -selection c"

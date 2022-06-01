@@ -40,7 +40,7 @@ super + e
 {F8,F7}
 	brightnessctl set {+1%,1%-}
 #backlight
-super + {Up,Down}
+Fn + {Up,Down}
 	brightnessctl --device='asus::kbd_backlight' set {+1,1-}
 #flameshot
 Print
@@ -58,21 +58,25 @@ super + r
 
 #aot
 super + a 
-	 mpv "aot/$(ls aot | rofi -dmenu -i -p "Select The EP" 2>/dev/null)"
+	 mpv "Movies/$(ls Movies | rofi -dmenu -i -p "Select The Movie/EP :" 2>/dev/null)"
+super + v 
+	mpv "Videos/$(ls Videos | rofi -dmenu -i -p "Select The Movie/EP :" 2>/dev/null)"
 #emoji
 super + z
 	emocli -li | rofi -dmenu -window-title emoji | cut -d' ' -f1 | tr -d '\n' | xclip -selection clipboard
 #Telegram
 alt + t
 	telegram-desktop
-
+#
+alt + q 
+	qrscan
 #random wal
 alt + x
 	random
 alt + w
 	setwal $(sxiv -t -f -o ~/wall)
 #lock
-super + l
+F9
 	i3lock-fancy
 
 # quit/restart bspwm
