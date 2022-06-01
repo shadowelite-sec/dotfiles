@@ -35,7 +35,7 @@ git_cfg(){
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo pacman -Syy && sudo pacman -S --noconfirm archlinux-keyring xorg xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv aria2 piper jq sxiv lolcat bat noto-fonts-emoji fzf npm brightnessctl zathura xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool mpc npm i3lock net-tools bluez bluez-utils pulseaudio-bluetooth pulsemixer stow unzip zip gzip p7zip xf86-input-libinput ntfs-3g slop shotgun maim zbar gvfs-mtp gvfs tumbler 
+sudo pacman -Syy && sudo pacman -S --noconfirm archlinux-keyring xorg xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv aria2 piper jq sxiv lolcat bat noto-fonts-emoji fzf npm brightnessctl zathura xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool mpc npm i3lock net-tools bluez bluez-utils pulseaudio-bluetooth pulsemixer stow unzip zip gzip p7zip xf86-input-libinput ntfs-3g slop shotgun maim zbar gvfs-mtp gvfs tumbler ffmpegthumbnailer 
 
 #install old dusnt
 oldunst
@@ -61,7 +61,8 @@ stow */
 #additionl pkgs
 
 echo "${YELLOW}Installing additional pkgs....${END}"
-sudo pacman -S --noconfirm cmus cmatrix ranger telegram-desktop firefox thunar 
+sudo pacman -S --noconfirm cmus cmatrix ranger telegram-desktop firefox thunar-volman thunar-media-tags-plugin thunar-archive-plugin    
+
 
 #yay pkg
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
