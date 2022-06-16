@@ -7,7 +7,8 @@ pkill -USR1 -x sxhkd
 wal -R
 pkill -9 picom
 #feh --bg-fill --randomize ~/Pictures/wall/wallhaven-x*
-xrandr --rate 144 &
+xrandr --setprovideroutputsource modesetting NVIDIA-G0
+xrandr --auto
 picom  --experimental-backends &
 #picom --experimental-backends --blur-method dual_kawase --blur-strength 3 &
 
@@ -42,7 +43,9 @@ bspc config normal_border_color "#000000"
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a TelegramDesktop center=true state=floating rectangle=500x800+0+0 
 bspc rule -a mpv state=floating center=true rectangle=1500x840+0+0
-#bspc rule -a kitty state=floating rectangle=500x800+0+0 
+bspc rule -a scrcpy center=true state=floating rectangle=420x840+0+0 
+bspc rule -a Zathura state=floating rectangle=508x904+0+0 
+buckle &
 xsetroot -cursor_name left_ptr
 xautolock -detectsleep -time 10 -locker i3lock-fancy -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" &
 

@@ -45,6 +45,14 @@ Fn + {Up,Down}
 #flameshot
 Print
 	flameshot gui
+
+#record screen && stop
+ctrl + Print
+	srec
+
+ctrl shift + Print
+	killall ffmpeg
+
 #firefox
 super + f
 	firefox
@@ -54,7 +62,7 @@ ctrl + alt + w
 	waldl
 #reaad
 super + r
-	zathura "~/Documents/$(ls Documents | rofi -dmenu -i -p "Select The Book" 2>/dev/null)"  
+	~/.local/bin/zathura "~/Documents/$(ls Documents | rofi -dmenu -i -p "Select The Book" 2>/dev/null)"  
 
 #aot
 super + a 
@@ -78,6 +86,9 @@ alt + w
 #lock
 F9
 	i3lock-fancy
+
+alt + s
+	scrcpy &
 
 # quit/restart bspwm
 super + alt + {q,r}

@@ -5,9 +5,9 @@
 #date: 25 Jan 2022
 
 #colors
-c1=$(expr substr $(cat /home/shadowelite/.cache/wal/colors.sh | grep 'color1=' | cut -c 8-) 3 2)
-c2=$(expr substr $(cat /home/shadowelite/.cache/wal/colors.sh | grep 'color1=' | cut -c 8-) 5 2)
-c3=$(expr substr $(cat /home/shadowelite/.cache/wal/colors.sh | grep 'color1=' | cut -c 8-) 7 2)
+c1=$(expr substr $(cat $HOME/.cache/wal/colors.sh | grep 'color1=' | cut -c 8-) 3 2)
+c2=$(expr substr $(cat $HOME/.cache/wal/colors.sh | grep 'color1=' | cut -c 8-) 5 2)
+c3=$(expr substr $(cat $HOME/.cache/wal/colors.sh | grep 'color1=' | cut -c 8-) 7 2)
 
 sudo bash -c "
 # Red [00 - ff]

@@ -23,12 +23,13 @@ _comp_options+=(globdots)		# Include hidden files.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/flutter/bin
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias icat="kitty +kitten icat"
 alias ls="ls --color=auto"
 alias history="history 100"
 alias vi="nvim"
 alias vim="nvim"
-
+alias zathura="~/.local/bin/zathura"
 #shortcuts
 gp(){
 grep -ir "$1"
