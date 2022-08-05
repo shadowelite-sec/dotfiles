@@ -9,13 +9,14 @@ BOLDGREEN="\e[1;${GREEN}m"
 ITALICRED="\e[3;${RED}m"
 
 oldunst(){
-
-	cd /bin/
-	sudo rm dunst*
-	sudo sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunst
-	sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunstify
-	sudo wget https://raw.githubusercontent.com/shadowelite-sec/scripts/main/dunst/dunstctl
-	sudo chmod +x /bin/dunst*
+#
+#	cd /bin/
+#	sudo rm dunst*
+#	sudo sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunst
+#	sudo wget https://github.com/shadowelite-sec/scripts/raw/main/dunst/dunstify
+#	sudo wget https://raw.githubusercontent.com/shadowelite-sec/scripts/main/dunst/dunstctl
+#	sudo chmod +x /bin/dunst*
+	sudo downgrade dunst
 }
 
 mpd_fix(){
@@ -35,10 +36,9 @@ git_cfg(){
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo pacman -Syy && sudo pacman -S --noconfirm archlinux-keyring xorg xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv aria2 piper jq sxiv lolcat bat noto-fonts-emoji fzf npm brightnessctl zathura-pdf-mupdf xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool mpc npm i3lock net-tools bluez bluez-utils pulseaudio-bluetooth pulsemixer stow unzip zip gzip p7zip xf86-input-libinput ntfs-3g slop shotgun maim zbar gvfs-mtp gvfs tumbler ffmpegthumbnailer screenkey bucklespring 
+sudo pacman -Syy --noconfirm && sudo pacman -S --noconfirm archlinux-keyring xorg xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv piper jq sxiv lolcat bat noto-fonts-emoji fzf npm brightnessctl zathura-pdf-mupdf xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool mpc npm i3lock net-tools bluez bluez-utils pulseaudio-bluetooth pulsemixer stow unzip zip gzip p7zip xf86-input-libinput ntfs-3g slop shotgun maim zbar gvfs-mtp gvfs tumbler ffmpegthumbnailer screenkey bucklespring  
 
 #install old dusnt
-oldunst
 mpd_fix
 git_cfg
 
@@ -61,13 +61,13 @@ stow */
 #additionl pkgs
 
 echo "${YELLOW}Installing additional pkgs....${END}"
-sudo pacman -S --noconfirm cmus cmatrix ranger telegram-desktop firefox thunar-volman thunar-media-tags-plugin thunar-archive-plugin    
+sudo pacman -S --noconfirm cmus cmatrix ranger starship telegram-desktop firefox thunar-volman thunar-media-tags-plugin thunar-archive-plugin    
 
 
 #yay pkg
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-yay -S mugshot bspwm-rounded-corners cava toilet bluez-hciconfig bluez-hcitool android-bash-completion web-greeter 
+yay -S mugshot bspwm-rounded-corners cava toilet bluez-hciconfig bluez-hcitool android-bash-completion batify downgrade
 
 #nvim plug
 
@@ -92,6 +92,7 @@ sudo cp -r rc.local /etc/
 sudo bash -c "echo "_JAVA_AWT_WM_NONREPARENTING=1" >>/etc/environment"
 sudo bash -c "echo "gtk-application-prefer-dark-theme=1" >> /usr/share/gtk-3.0/settings.ini"
 fc-cache -f -v 2>/dev/null
+oldunst
 echo "${BOLDGREEN}ALL DONE${END}"
 
 read -p "Installation Finshed, Do You Want To Reboot Your System Now ?! " yn
