@@ -89,7 +89,6 @@ sleep 0.5
 echo "Done 🐉"
 #backlight auto
 sudo cp -r rc.local /etc/
-sudo chmod 777 /etc/rc.local
 sudo bash -c "echo "_JAVA_AWT_WM_NONREPARENTING=1" >>/etc/environment"
 sudo bash -c "echo "gtk-application-prefer-dark-theme=1" >> /usr/share/gtk-3.0/settings.ini"
 fc-cache -f -v 2>/dev/null

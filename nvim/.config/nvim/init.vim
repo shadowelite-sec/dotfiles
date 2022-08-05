@@ -11,7 +11,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'voldikss/vim-floaterm'
 Plug 'vim-airline/vim-airline' 
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
+Plug 'hrsh7th/nvim-cmp'
 call plug#end()
 
 "set
@@ -27,6 +29,8 @@ nnoremap <C-s> :Startify<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-n> :set number!<CR>
+"Floaterm key
+let g:floaterm_keymap_toggle = '<Leader>t'
 "Space
 "let g:spaceline_seperate_style = 'slant'
 "let g:spaceline_colorscheme = 'one'

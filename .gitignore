@@ -11,4 +11,4 @@ lib.pl
 mpd.db
 mpd.pid
 mpdstate
-wall
+bin/.local/bin

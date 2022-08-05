@@ -1,0 +1,14 @@
+#!/bin/bash
+# Author: @shadowelite    
+# Date: 20-07-2022    
+# Description: To find Bluetooth Volume  
+# https://github.com/shadowelite-sec   
+
+ID=`pulsemixer --list-sinks | awk 'NR == 2 {print $3}' | grep -Eo '[0-9]{1,4}'`        
+
+if [[ "$ID" == "" ]];then
+	
+	echo ""
+else
+	echo "﫽 $(pulsemixer --get-volume --id $ID | awk '{print $1}')% "
+fi

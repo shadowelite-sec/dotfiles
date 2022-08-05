@@ -1,3 +1,3 @@
 #!/bin/bash
 
-chown shadowelite /sys/class/leds/asus::kbd_backlight/brightness
+chown shadow /sys/class/leds/asus::kbd_backlight/brightness

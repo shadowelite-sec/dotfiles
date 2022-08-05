@@ -51,7 +51,7 @@ ctrl + Print
 	srec
 
 ctrl shift + Print
-	killall ffmpeg
+	giph --stop
 
 #firefox
 super + f

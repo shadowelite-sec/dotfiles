@@ -1,4 +1,4 @@
 #!/bin/bash
-bspc node -t floating center=true
+bspc node -t floating
 xdotool getactivewindow windowsize 600 400 
 bspc config border_radius 20
