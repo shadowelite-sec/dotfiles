@@ -1,4 +1,5 @@
 #!/bin/bash
 bspc node -t floating
 xdotool getactivewindow windowsize 600 400 
+xdotool getactivewindow windowmove 666 339
 bspc config border_radius 20

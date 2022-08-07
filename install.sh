@@ -36,7 +36,7 @@ git_cfg(){
 
 echo -e "${RED}Installing Dependencies....${END}"
 
-sudo pacman -Syy --noconfirm && sudo pacman -S --noconfirm archlinux-keyring xorg xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv piper jq sxiv lolcat bat noto-fonts-emoji fzf npm brightnessctl zathura-pdf-mupdf xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool mpc npm i3lock net-tools bluez bluez-utils pulseaudio-bluetooth pulsemixer stow unzip zip gzip p7zip xf86-input-libinput ntfs-3g slop shotgun maim zbar gvfs-mtp gvfs tumbler ffmpegthumbnailer screenkey bucklespring  
+sudo pacman -Syy --noconfirm && sudo pacman -S --noconfirm archlinux-keyring xorg xorg-xinit sxhkd polybar rofi picom kitty zsh feh flameshot wget dunst mugshot mpv piper jq sxiv lolcat bat noto-fonts-emoji fzf npm brightnessctl zathura-pdf-mupdf xclip python3 python-pip neovim mpd ncmpcpp imagemagick xautolock xdotool mpc npm i3lock net-tools bluez bluez-utils pulseaudio-bluetooth pulsemixer stow unzip zip gzip p7zip xf86-input-libinput ntfs-3g slop shotgun maim zbar gvfs-mtp gvfs tumbler ffmpegthumbnailer screenkey bucklespring yad  
 
 #install old dusnt
 mpd_fix
