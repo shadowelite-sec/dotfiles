@@ -22,7 +22,7 @@ alias zathura="~/.local/bin/zathura"
 alias ncmpcpp="~/.config/ncmpcpp/ncmpcpp-ueberzug"
 alias ip="ifconfig | grep inet | head -n3  | tail -n1"
 alias hs="history | cut -c 8- | sort | uniq | fzf | tr -d '\\n' | xclip -selection c"
-
+alias grep="grep --color"
 #shortcuts
 gp(){
 grep -ir "$1"

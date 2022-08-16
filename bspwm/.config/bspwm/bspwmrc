@@ -14,11 +14,12 @@ pkill -9 xautolock
 pkill -9 mpd
 
 #run
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 wal-telegram &
 dunst &
 wdunst &
 mpd & 2>/dev/null
-
+flameshot &
 #bspc config
 
 bspc monitor -d I II III IV V VI VII VIII IX X

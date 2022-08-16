@@ -10,5 +10,5 @@ if [[ "$ID" == "" ]];then
 	
 	echo ""
 else
-	echo "﫽 $(pulsemixer --get-volume --id $ID | awk '{print $1}')% "
+	echo "    﫽 $(pulsemixer --get-volume --id $ID | awk '{print $1}')% "
 fi
