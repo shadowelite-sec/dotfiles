@@ -14,21 +14,58 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'audibleblink/hackthebox.vim'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 call plug#end()
 
 "set
-:set number
-:set clipboard=unnamedplus
+set number
+set clipboard=unnamedplus
+set splitbelow splitright "default split
 
-"cmd
 "autocmd VimEnter * NERDTree
 "autocmd VimEnter * wincmd p
 
 "keys
-nnoremap <C-s> :Startify<CR>
+nnoremap <C-i> :Startify<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-n> :set number!<CR>
+
+
+"auto code running
+"exe python
+augroup exe_code
+	autocmd!
+	autocmd FileType python nnoremap <buffer> <localleader>r
+				\ :sp<CR> :term python3 %<CR> :startinsert<CR>
+
+augroup END
+
+" exe bashrc
+augroup exe_code
+	autocmd!
+	autocmd FileType bash,sh nnoremap <buffer> <localleader>r
+				\ :sp<CR> :term bash %<CR> :startinsert<CR>
+
+augroup END
+
+
+" C/C++
+augroup exe_code
+	autocmd!
+	autocmd FileType c,c++ nnoremap <buffer> <localleader>r
+				\ :sp<CR> :term gcc %:p && ./a.out && rm a.out<CR> :startinsert<CR>
+
+augroup END
+
+
+"bufferline
+set termguicolors
+:set mouse=n
+lua << EOF
+require("bufferline").setup{}
+EOF
 
 "Floaterm key
 let g:floaterm_keymap_toggle = '<Leader>t'
@@ -222,7 +259,7 @@ let g:startify_lists = [
 let g:startify_bookmarks = [
             \ { 'a': '~/.config/bspwm/bspwmrc' },
             \ { 'b': '~/.config/nvim/init.vim' },
-            \ { 'c': '~/.zshrc' },
+            \ { 'c': '~/.bashrc' },
 	    \ { 'd': '~/ctf' },
 	    \ { 'e': '~/code' },
 	    \]
