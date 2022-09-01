@@ -34,26 +34,17 @@ nnoremap <C-n> :set number!<CR>
 
 
 "auto code running
-"exe python
 augroup exe_code
+
 	autocmd!
+"exe python
+
 	autocmd FileType python nnoremap <buffer> <localleader>r
 				\ :sp<CR> :term python3 %<CR> :startinsert<CR>
-
-augroup END
-
 " exe bashrc
-augroup exe_code
-	autocmd!
 	autocmd FileType bash,sh nnoremap <buffer> <localleader>r
 				\ :sp<CR> :term bash %<CR> :startinsert<CR>
-
-augroup END
-
-
-" C/C++
-augroup exe_code
-	autocmd!
+"" C/C++
 	autocmd FileType c,c++ nnoremap <buffer> <localleader>r
 				\ :sp<CR> :term gcc %:p && ./a.out && rm a.out<CR> :startinsert<CR>
 
