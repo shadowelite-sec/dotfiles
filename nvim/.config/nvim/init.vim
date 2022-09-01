@@ -40,13 +40,13 @@ augroup exe_code
 "exe python
 
 	autocmd FileType python nnoremap <buffer> <localleader>r
-				\ :sp<CR> :term python3 %<CR> :startinsert<CR>
+				\ :sp<CR>:term python3 %<CR>:startinsert<CR>
 " exe bashrc
 	autocmd FileType bash,sh nnoremap <buffer> <localleader>r
-				\ :sp<CR> :term bash %<CR> :startinsert<CR>
+				\ :sp<CR>:term bash %<CR>:startinsert<CR>
 "" C/C++
 	autocmd FileType c,c++ nnoremap <buffer> <localleader>r
-				\ :sp<CR> :term gcc %:p && ./a.out && rm a.out<CR> :startinsert<CR>
+				\ :sp<CR>:term gcc %:p && ./a.out && rm a.out<CR>:startinsert<CR>
 
 augroup END
 
