@@ -16,12 +16,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'audibleblink/hackthebox.vim'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+Plug 'seandewar/killersheep.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'karb94/neoscroll.nvim'
+Plug 'lewis6991/spellsitter.nvim'
+Plug 'rcarriga/nvim-notify'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 "set
 set number
 set clipboard=unnamedplus
 set splitbelow splitright "default split
+
+" cursorline
+hi CursorLineNr guifg=#af00af
+set cursorline
+set cursorlineopt=number
 
 "autocmd VimEnter * NERDTree
 "autocmd VimEnter * wincmd p
@@ -31,7 +42,6 @@ nnoremap <C-i> :Startify<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-n> :set number!<CR>
-
 
 "auto code running
 augroup exe_code
@@ -55,7 +65,34 @@ augroup END
 set termguicolors
 :set mouse=n
 lua << EOF
-require("bufferline").setup{}
+require("bufferline").setup {
+    options = {
+      numbers = "none",
+      diagnostics = "coc",
+      separator_style = "slant" or "padded_slant",
+      show_tab_indicators = true,
+      show_buffer_close_icons = true,
+      show_close_icon = false,
+    },
+  }
+EOF
+
+" neoscroll
+lua require('neoscroll').setup()
+
+" spellsitter
+lua << EOF
+require('spellsitter').setup {
+  -- Whether enabled, can be a list of filetypes, e.g. {'python', 'lua'}
+  enable = true,
+  debug = false
+}
+EOF
+"notify
+lua << EOF
+require("notify").setup({
+  background_colour = "#4F7942",
+})
 EOF
 
 "Floaterm key
@@ -66,7 +103,7 @@ let g:floaterm_keymap_toggle = '<Leader>t'
 "let g:spaceline_scroll_chars = ['⎺', '⎻', '⎼', '⎽', '⎯'] " on Linux
 
 "airline
-let g:airline_theme = 'jellybeans'
+let g:airline_theme = 'deus'
 
 "COC
 " Some servers have issues with backup files, see #649.
