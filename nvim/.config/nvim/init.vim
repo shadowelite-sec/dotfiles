@@ -22,13 +22,16 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'lewis6991/spellsitter.nvim'
 Plug 'rcarriga/nvim-notify'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'alvan/vim-closetag'
+Plug 'tamago324/vim-browsersync'
+Plug 'tyru/open-browser.vim'
+
 call plug#end()
 
 "set
 set number
 set clipboard=unnamedplus
 set splitbelow splitright "default split
-
 " cursorline
 hi CursorLineNr guifg=#af00af
 set cursorline
@@ -36,6 +39,7 @@ set cursorlineopt=number
 
 "autocmd VimEnter * NERDTree
 "autocmd VimEnter * wincmd p
+autocmd VimEnter * BrowserSyncStart
 
 "keys
 nnoremap <C-i> :Startify<CR>
@@ -102,10 +106,30 @@ let g:floaterm_keymap_toggle = '<Leader>t'
 "let g:spaceline_colorscheme = 'one'
 "let g:spaceline_scroll_chars = ['⎺', '⎻', '⎼', '⎽', '⎯'] " on Linux
 
+
+"term
+" open new split panes to right and below
+set splitright
+set splitbelow
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+" open terminal on ctrl+n
+function! OpenTerminal()
+  split term://bash
+  resize 10
+endfunction
+nnoremap <c-y> :call OpenTerminal()<CR>
+
 "airline
 let g:airline_theme = 'deus'
 
 "COC
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nnoremap <C-f> :CocCommand prettier.formatFile<CR>
+
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
@@ -274,6 +298,57 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"FZF
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+"Markdown
+let g:mkdp_browser = 'firefox'
+
+" closetag
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml'
+
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+
+" integer value [0|1]
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+"
+let g:closetag_emptyTags_caseSensitive = 1
+
+" dict
+" Disables auto-close if not in a "valid" region (based on filetype)
+"
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ 'typescriptreact': 'jsxRegion,tsxRegion',
+    \ 'javascriptreact': 'jsxRegion',
+    \ }
+
+" Shortcut for closing tags, default is '>'
+"
+let g:closetag_shortcut = '>'
+
+" Add > at current position without closing the current tag, default is ''
+"
+let g:closetag_close_shortcut = '<leader>>'
+
 
 "List
 let g:startify_lists = [
